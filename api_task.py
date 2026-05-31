@@ -1,12 +1,3 @@
-"""API helper functions for the API & JSON task.
-
-This project uses the free Open-Meteo Forecast API:
-https://open-meteo.com/
-
-The script fetches current weather data, parses JSON, and returns a clean
-Python dictionary that is easy to print in the terminal.
-"""
-
 from __future__ import annotations
 
 from dataclasses import dataclass
