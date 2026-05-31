@@ -1,0 +1,10 @@
+Smart API & JSON Demo
+Fetching live data from a free public API...
+
+=== Live API Response: Chuck Norris Joke ===
+ID: QxCSyCDZSaqlLTuQBowhmw
+Category Count: 0
+Updated At: 2020-01-05 13:42:24.40636
+Joke: Chuck Norris can kill a red dragon with his level 1 mage using a single magic missile.. immediately followed by a roundhouse kick.
+API URL: https://api.chucknorris.io/jokes/QxCSyCDZSaqlLTuQBowhmw
+===========================================
