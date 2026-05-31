@@ -29,13 +29,7 @@ class WeatherResult:
 
 
 def fetch_weather(latitude: float, longitude: float, city: str = "Bengaluru") -> Dict[str, Any]:
-    """Fetch live weather data from Open-Meteo and return parsed JSON.
-
-    If the live request fails (for example, when network access is unavailable),
-    a deterministic fallback payload is returned so the assignment still runs
-    and the output format stays the same.
-    """
-
+    
     params = {
         "latitude": latitude,
         "longitude": longitude,
@@ -54,8 +48,7 @@ def fetch_weather(latitude: float, longitude: float, city: str = "Bengaluru") ->
 
 
 def build_fallback_payload(city: str, latitude: float, longitude: float) -> Dict[str, Any]:
-    """Create a sample payload that mirrors the live API structure."""
-
+    
     return {
         "latitude": latitude,
         "longitude": longitude,
@@ -85,7 +78,7 @@ def build_fallback_payload(city: str, latitude: float, longitude: float) -> Dict
 
 
 def parse_weather(payload: Dict[str, Any], city: str = "Bengaluru") -> WeatherResult:
-    """Convert API JSON into a compact WeatherResult object."""
+   
 
     current = payload.get("current") or payload.get("current_weather") or {}
     units = payload.get("current_units", {})
@@ -111,8 +104,7 @@ def parse_weather(payload: Dict[str, Any], city: str = "Bengaluru") -> WeatherRe
 
 
 def format_weather(result: WeatherResult) -> str:
-    """Return a pretty terminal-friendly report."""
-
+  
     humidity = f"{result.humidity_percent}%" if result.humidity_percent is not None else "N/A"
     code = str(result.weather_code) if result.weather_code is not None else "N/A"
     return (
