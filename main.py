@@ -1,5 +1,3 @@
-"""Entry point for the API & JSON task."""
-
 from __future__ import annotations
 
 import json
